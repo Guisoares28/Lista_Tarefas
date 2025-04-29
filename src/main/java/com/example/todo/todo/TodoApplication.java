@@ -15,18 +15,6 @@ public class TodoApplication {
 		SpringApplication.run(TodoApplication.class, args);
 	}
 
-	public class IniciarDados{
-		@Bean
-		public CommandLineRunner initUsuario(UserService userService, PasswordEncoder bCryptEncoder){
-			return args -> {
-				UserModel user = new UserModel();
-				user.setUsername("guilherme");
-				user.setPassword("123");
-				userService.saveUser(user);
-				System.out.println("Usuário inicializado com sucesso.");
-			};
-		}
-	}
 
 }
 

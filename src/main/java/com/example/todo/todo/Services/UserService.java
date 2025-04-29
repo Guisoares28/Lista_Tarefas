@@ -52,4 +52,8 @@ public class UserService {
 
     }
 
+    public void deleteUser(UserModel userModel){
+        userRepository.deleteById(userModel.getId());
+    }
+
 }
